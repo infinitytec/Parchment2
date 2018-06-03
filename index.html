@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--
+ __                     __                      
+|__)_  _ _|_  _  _ _ |_  _)                     
+|  (_|| (_| )|||(-| )|_ /__                     
+                                                
+ __                            _                
+/   _ _ _ |_ _ _|  |_     . _ (_. _ .|_  |_ _ _ 
+\__| (-(_||_(-(_|  |_)\/  || )| || )||_\/|_(-(_ 
+                      /                /        
+-->
+
+<html lang="en">
+
+<head>
+    <title>Parchment2 Demonstration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="style/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="style/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script src="style/dropdown.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <img src="style/logo.png" alt="logo">
+    </header>
+
+    <div id="navbar">
+        <!--Page Title-->
+        <h1>Parchment2</h1>
+        <nav id="main">
+            <button class="dropdown" id="dropdownbutton" onclick="dropdown()">&equiv; Menu</button>
+            <div id="dropdown-main" class="dropdown-content">
+                <!--Navbar-->
+                <a href="#">Home</a>
+
+            </div>
+        </nav>
+
+    </div>
+    <main>
+        <!--Main Content-->
+        <div class="landing">
+            <!--Landing area-->
+            <div class="content">
+                <h1>Parchment 2: A Simple Web Framework</h1>
+                <h1>Minimalistic and responsive</h1>
+            </div>
+        </div>
+        <div class="full">
+            <!--Full width-->
+            <div class="content">
+                <h1>Parchment2</h1>
+                <p>Parchment2 is a rebuild of the original Parchment theme. Parchment was designed to have a modern and responsive theme. Parchment2 is designed to continue that goal, but meeting the latest in ever-evolving design standards.</p>
+            </div>
+        </div>
+        <div class="half">
+            <!--Half width-->
+            <div class="content">
+                <h1>About the design</h1>
+                <p>Parchment2 has been heavily influenced by <a href="http://fluent.microsoft.com/">Microsoft's Fluent Design System</a>. Other design considerations came from the importance of mobile support. A consistent experience was targeted. Parchment featured numerous settings for different screen sizes. Parchment2 has significantly fewer, as it is designed to meet requirements for all screen sizes.</p>
+            </div>
+        </div>
+        <div class="half">
+            <!--Half width-->
+            <div class="content">
+                <h1>Credits</h1>
+                <p>Parchment2 was made possible with help from the following:</p>
+                <ul>
+                    <li><a href="http://brackets.io/">Brackets</a>, my editor of choice</li>
+                    <li><a href="https://www.w3schools.com/">W3Schools</a>, for their helpful tutorials and references.</li>
+                    <li><a href="https://stackoverflow.com/">Stack Overflow</a>'s large database of knowledge.</li>
+                    <li><a href="https://fonts.google.com/">Google Fonts</a></li>
+                    <li>The web development courses I took.</li>
+                    <li>Various other help sites around the Internet.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="landing">
+            <div class="content">
+                <h1>Feature Demonstration</h1>
+                <p>(This is a landing area)</p>
+            </div>
+        </div>
+        <div class="full">
+            <div class="content">
+                <h1>Full width area (and demonstrations!)</h1>
+                <h1>h1</h1>
+                <h2>h2</h2>
+                <h3>h3</h3>
+                <h4>h4</h4>
+                <h5>h5</h5>
+                <h6>h6</h6>
+                <p>Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id congue erat, in lacinia velit. Sed pellentesque sodales sapien, ac semper orci faucibus dictum. Sed varius a dui vitae imperdiet. Vestibulum rhoncus nisi a mi sodales fermentum. In a maximus neque, ut blandit metus. Duis egestas est in urna sollicitudin, id condimentum tellus aliquam. Sed tristique dapibus justo quis sollicitudin. Maecenas interdum ex vel leo gravida, eu faucibus orci pharetra. Mauris in tempus lorem. Duis nisi nisl, consequat at cursus sit amet, pretium at velit. Nunc convallis mauris in viverra lacinia. </p>
+                <span>Span text. Just a line of text.</span>
+                <code>This is some code. Rather, a code area. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id congue erat, in lacinia velit. Sed pellentesque sodales sapien, ac semper orci faucibus dictum. Sed varius a dui vitae imperdiet. Vestibulum rhoncus nisi a mi sodales fermentum. In a maximus neque, ut blandit metus. Duis egestas est in urna sollicitudin, id condimentum tellus aliquam. Sed tristique dapibus justo quis sollicitudin. Maecenas interdum ex vel leo gravida, eu faucibus orci pharetra. Mauris in tempus lorem. Duis nisi nisl, consequat at cursus sit amet, pretium at velit. Nunc convallis mauris in viverra lacinia. </code>
+                <article>
+                    <header>Article header
+                        <h1>Article header h1 </h1>
+                    </header>
+                    <address><span>This is my address.</span></address>
+                    <p>Article p. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id congue erat, in lacinia velit. Sed pellentesque sodales sapien, ac semper orci faucibus dictum. Sed varius a dui vitae imperdiet.</p>
+                    <blockquote>
+                        <p>Blockquote p. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id congue erat, in lacinia velit. Sed pellentesque sodales sapien, ac semper orci faucibus dictum. Sed varius a dui vitae imperdiet.</p>
+                    </blockquote>
+                    <p> Vestibulum rhoncus nisi a mi sodales fermentum. In a maximus neque, ut blandit metus. Duis egestas est in urna sollicitudin, id condimentum tellus aliquam.</p> <q>Quote. Sed tristique dapibus justo quis sollicitudin.</q>
+                    <p> Maecenas interdum ex vel leo gravida, <del><abbr title="deleted text (you found the abbreviation!)">del</abbr>. eu faucibus</del> orci pharetra.</p>
+                    <aside>Aside. Mauris in tempus lorem.</aside>
+                    <p>Duis nisi nisl, consequat at cursus sit amet, pretium at velit. Nunc convallis mauris in viverra lacinia. </p>
+                </article>
+                <img href="">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="quarter">
+            <div class="content">
+                <!--Search bar-->
+                <form class="search" name="search" action="http://duckduckgo.com/">
+                    <input type="hidden" value="https://infinitytec.github.io" name="sites">
+                    <!--sites-->
+                    <input type="hidden" value="1" name="kh">
+                    <!--use https-->
+                    <input type="hidden" value="d" name="kae">
+                    <!--theme-->
+                    <input type="hidden" value="-1" name="ko">
+                    <!--header position-->
+                    <input type="hidden" value="-1" name="k1">
+                    <!--no advertisements-->
+                    <input type="hidden" value="1" name="kp">
+                    <!--safe search-->
+                    <input type="hidden" value="1" name="kac">
+                    <!--auto suggest on-->
+                    <input type="text" placeholder="Search" name="q">
+                    <!--searchbar--><input type="submit" name="search" value="&#x2315;">
+                    <!--search button-->
+                </form>
+            </div>
+        </div>
+        <div class="quarter">
+            <div class="content center">
+                <a href="#" class="button">Home</a>
+            </div>
+        </div>
+        <div class="quarter right">
+            <div class="content">
+                <p>Brought to you by <a href="http://infinitytec.github.io">infinitytec</a>.</p>
+                <p>The Parchment2 style is released under the <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html">GNU General Public License, version 2</a>.</p>
+            </div>
+        </div>
+    </footer>
+    <!--[if IE]>
+    <div id="incompatibility">
+    <h1>Your browser is incompatible with this site!</h1>
+        <p>Some elements may not display properly.</p>
+        <p>Please upgrade to a standards-compliant browser such as Firefox or Chrome.</p>
+    </div>
+    <![end if]-->
+</body>
+
+</html>
