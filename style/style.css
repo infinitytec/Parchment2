@@ -1,0 +1,908 @@
+/*
+                   
+|__)_  _ _|_  _  _ _ |_  _)                     
+|  (_|| (_| )|||(-| )|_ /__                     
+                                                
+ __                            _                
+/   _ _ _ |_ _ _|  |_     . _ (_. _ .|_  |_ _ _ 
+\__| (-(_||_(-(_|  |_)\/  || )| || )||_\/|_(-(_ 
+                      /                /        
+
+					  
+			--Theme notes--
+	
+	This code is liscenced under the GNU General Public License, version 2. For a copy of the license, please see https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+	
+	Note: colors uses are either Hex or RGBA. RGBA is used to add transparency easily. For more information on colors, see https://www.w3schools.com/cssref/css_colors_legal.asp
+	
+	Page background image (applied to body): background.jpg
+	Blurred background image (applied to .landing, .full, .half, and .quarter): background-blurred.jpg
+	Background color (applied to header): rgba(10, 10, 10, 1)
+	Background color with minimal transparency (applied to the navigation menu, navigation dropdown, and code): rgba(10, 10, 10, 0.99)
+	Tint color (applied to .content): rgba(10, 10, 10, 0.75)
+	Highlight color (applied to h1 background, buttons, and large links): #555
+	Text color (applied to all text): #FFF
+	Hader font (applied to headers and nav): Josefin Sans, weight: 300
+	Body text (applied to p, span, etc.): Raleway, weight: regular
+	Code (applied to code): Source Code Pro, weight: regular
+
+    Some code insipiration comes from W3Schools, Stack Overflow, and other sites.
+*/
+
+/*				Import fonts					*/
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300|Raleway|Source+Code+Pro');
+
+/*Main style*/
+
+@media screen {}
+
+/*				Colors and Backgrounds			*/
+
+body {
+    /*Page background*/
+    background: url(background.jpg);
+    /*The properties for the page background should be the same as those for the blurred background.*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.landing,
+.full,
+.threequarters,
+.half,
+.quarter {
+    /*Blurred background. For use of a non-blurred background, use the same image as the page background, or say 'none'.*/
+    background-image: url(background-blurred.jpg);
+    /*The properties for the blurred background should be the same as those for the page background.*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(10, 10, 10, 0.99);
+}
+
+.content {
+    /*Overlay color for content. Tints the blurred background.*/
+    background: rgba(10, 10, 10, 0.75);
+}
+
+header {
+    /*Header background.*/
+    background: rgba(10, 10, 10, 1);
+}
+
+nav,
+footer,
+code,
+fieldset {
+    /*Navbar, nav dropdown, code, and footer backgrounds.*/
+    background: rgba(10, 10, 10, 0.99);
+}
+
+/*Links, buttons, and form styles. Keep in mind that a elements inside a p element will have their borders removed.*/
+
+a,
+nav a,
+a.button,
+button,
+th,
+td,
+input,
+textarea,
+select {
+    /*Default styles*/
+    background: rgba(85, 85, 85, 0.05);
+    border: 2px solid white;
+    transition: all 0.2s ease;
+    /* Safari 3.1 to 6.0 support*/
+    -webkit-transition: all 0.2s ease;
+}
+
+nav a:hover,
+.content a:hover,
+a.button:hover,
+button:hover,
+th:hover,
+td:hover,
+input:hover,
+textarea:hover {
+    /*Make element stand out on hover*/
+    background: rgba(85, 85, 85, 0.5);
+}
+
+nav a:active,
+.content a:active,
+a.button:active,
+button:active,
+th:active,
+td:active,
+input:active,
+textarea:active {
+    /*Visual click feedback*/
+    background: rgba(113, 113, 113, 1);
+}
+
+a[href^="#"] {
+    /*Make links that go to the current page stand out, to show you are currently there.*/
+    background: rgba(255, 255, 255, 0.10);
+}
+
+/*			Fonts, font colors, font styles, etc.			*/
+
+h1 {
+    /*Main header*/
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFF;
+    font-size: 2em;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+}
+
+.content h1 {
+    background: rgba(85, 85, 85, 0.05);
+}
+
+.landing h1 {
+    /*Landing area header*/
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 3.5em;
+    color: #FFF;
+}
+
+.landing p {
+    /*Landing area text*/
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.5em;
+    color: #FFF;
+    text-align: center;
+}
+
+.footer-content h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 3.5em;
+    color: #FFF;
+}
+
+h2,
+th {
+    /*Secondary header and table header*/
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFF;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+}
+
+h3 {
+    /*Tertiary header*/
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFF;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+}
+
+h4 {
+    /*Level 4 header*/
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFF;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+}
+
+h5 {
+    /*Level 5 header*/
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFF;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: 300;
+    text-align: left;
+}
+
+h6 {
+    /*Level 6 header*/
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFF;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: 300;
+    text-align: left;
+}
+
+nav,
+nav a,
+a.button,
+button {
+    /*Navigation menu*/
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFF;
+    font-size: 1.1em;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+}
+
+body {
+    /*Body text*/
+    font-family: 'Raleway', sans-serif;
+    color: #FFF;
+    text-decoration-color: #FFF;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 300;
+    text-align: left;
+}
+
+code {
+    /*Code*/
+    font-family: 'Source Code Pro', monospace;
+    color: #FFF;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 300;
+    text-align: left;
+}
+
+td {
+    /*Table data*/
+    font-family: 'Raleway', sans-serif;
+    color: #FFF;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+}
+
+mark {
+    /*Highlighted text*/
+    background: #FFF;
+    color: rgb(10, 10, 10);
+}
+
+ins,
+ins p {
+    /*Inserted text*/
+    background: white;
+    color: black;
+    text-decoration: none;
+}
+
+ol {
+    /*Ordered list*/
+    list-style-type: upper-roman;
+}
+
+ul {
+    /*Unordered list*/
+    list-style-type: square;
+}
+
+/*			General Styles			*/
+
+body {
+    height: auto;
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/*Header*/
+
+header {
+    text-align: center;
+    padding: 10px;
+}
+
+header img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+/*Navbar*/
+
+#navbar {
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: -1px;
+    padding: 0;
+    z-index: 200;
+    width: auto;
+    height: auto;
+    min-height: 3.75em;
+}
+
+#navbar h1 {
+    /*Page title*/
+    display: inline;
+    position: absolute;
+    left: 4em;
+    top: 0.1em;
+    width: calc( 100% - 5em - 10px);
+    height: 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
+    line-height: 1.1em;
+    text-align: left;
+    z-index: 1;
+}
+
+nav {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -0.5px;
+    width: calc( 100% - 1em);
+    height: auto;
+    padding: 0.5em;
+    margin: 0;
+    text-align: left;
+    overflow: hidden;
+    max-height: 90vh;
+    min-height: 3.75em;
+}
+
+#dropdown-main {
+    transition: all 0.2s ease;
+    height: 0px;
+}
+
+#dropdown-main a {
+    display: none !important;
+}
+
+#dropdown-main.show {
+    height: auto;
+    display: block;
+    width: calc( 100% - 2em);
+    padding: 1em;
+    margin: 1.5em 0 1em 0;
+    text-align: center;
+    max-height: 50vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#dropdown-main.show a,
+a.button,
+button,
+input {
+    display: inline-block;
+    width: 10em;
+    padding: 1em;
+    margin: 0 0 0.5em 0;
+    text-decoration: none;
+    text-align: center;
+}
+
+.content h1,
+nav a,
+a.button,
+button,
+th,
+td,
+input,
+textarea,
+select {
+    box-sizing: border-box;
+}
+
+
+
+/*					Page Layouts					*/
+
+main {
+    /*Primary content area*/
+    width: calc(100% - 1em);
+    padding: 1em 0.5em 0 0.5em;
+    margin: 0;
+    height: auto;
+    overflow: hidden;
+}
+
+.landing {
+    /*Landing area*/
+    display: inline-block;
+    margin: calc(0.25em - 1px) 0 0.5em 0;
+    padding: 0;
+    height: auto;
+    width: calc(100% + 1em);
+    position: relative;
+    left: -0.5em;
+}
+
+.full,
+.half,
+.threequarters,
+.quarter {
+    /*Basic containers. The class indicates how wide they will be.*/
+    display: inline-block;
+    margin: 0.5em;
+    padding: 0;
+    overflow: visible;
+    height: auto;
+}
+
+.full {
+    /*Full width*/
+    width: calc(100% - 1em);
+}
+
+.half {
+    /*Half width. By default floats left.*/
+    width: calc(50% - 1em);
+    float: left;
+}
+
+.threequarters {
+    /*Three-quarters width. By default floats left.*/
+    width: calc(75% - 1em);
+    float: left;
+}
+
+.quarter {
+    /*One-quarter width. By default floats left.*/
+    width: calc(25% - 1em);
+    float: left;
+}
+
+.clear {
+    /*Add this class to a layout div to make it appear beneath all divs before it.*/
+    clear: both;
+}
+
+.right {
+    /*Makes a layout div float right instead of left. May be helpful when working with float drop.*/
+    float: right;
+}
+
+.content {
+    /*This is the container for all content. Since the layout divs have the blurred background, this is used to tint them, as well as providing padding, etc.*/
+    width: calc(100% - 4em);
+    min-height: 5em;
+    padding: 2em;
+    overflow: hidden;
+}
+
+.landing.content {
+    /*Special options for the landing layout's content.*/
+    padding: 0.5em;
+    width: calc(100% - 1em);
+}
+
+.content.center {
+    /*Make text in content centered.*/
+    text-align: center;
+}
+
+footer {
+    /*Basic footer settings.*/
+    display: inline-block;
+    padding: 0.5em 0 0 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 0.5em;
+}
+
+footer .full,
+footer .half,
+footer .threequarters,
+footer .quarter {
+    /*Adjustments to layout divs.*/
+    margin: 0;
+    background: none;
+}
+
+footer .full {
+    /*Make the full layout div fill the footer.*/
+    width: 100%;
+}
+
+footer .half {
+    /*Make the half layout div fill half of the footer.*/
+    width: 50%;
+}
+
+footer .threequarters {
+    /*Make the three-quarters layout div fill three-quarters of the footer.*/
+    width: 75%;
+}
+
+footer .quarter {
+    /*Make the quarter layout div fill one quarter of the footer.*/
+    width: 25%;
+}
+
+footer .content {
+    /*Since the footer does not get the blurred background, it is not necessary to color the content backgrounds.*/
+    background: none;
+}
+
+footer a.button {
+    width: calc(75% - 2em);
+    padding: 0.6em;
+    margin: 0 auto 0.25em auto;
+}
+
+/*text*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /*Basic header settings*/
+    margin: 0.5em 0;
+    width: calc(100% + 2em);
+    overflow-x: hidden;
+    padding: 0.5em 0;
+    position: relative;
+    right: 1em;
+}
+
+.landing h1 {
+    /*Landing-specific h1*/
+    width: calc(100% - 1em);
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+    background: none;
+    left: 0.5em;
+    display: inline-block;
+}
+
+footer .content h1 {
+    /*Footer-specific h1*/
+    width: 100%;
+    margin: 0;
+    padding: 0.5em 0 0.5em 0;
+    text-align: center;
+    background: none;
+}
+
+h5,
+h6 {
+    /*Make h5 and h6 appear on the left.*/
+    right: 0;
+}
+
+p,
+span {
+    /*Paragraph and span text.*/
+    width: 100%;
+    margin: 0 0 0.5em 0;
+}
+
+code {
+    /*Display code.*/
+    display: block;
+    width: 100%;
+    padding: 2em;
+    margin: 1em 0;
+    position: relative;
+    right: 2em;
+}
+
+article header {
+    /*Header styles for articles*/
+    width: calc(100% + 3em);
+    position: relative;
+    right: 2em;
+}
+
+article address p,
+article address span,
+blockquote p,
+blockquote span,
+q {
+    /*Paragraph and span text as article addresses, blockquotes, and q.*/
+    font-style: italic;
+}
+
+aside {
+    /*Make aside text sit farther right.*/
+    padding: 0 0 0 4em;
+}
+
+abbr {
+    /*Use an underline to indicate an abbreviation.*/
+    border: none;
+    text-decoration: underline;
+}
+
+del {
+    /*Strike through 'deleted text'*/
+    text-decoration: line-through;
+}
+
+/*Images*/
+
+.content img {
+    /*Image display configuration. Makes images display as big as possible without exceeding original sizes.*/
+    width: auto;
+    height: auto;
+    margin: auto;
+    display: block;
+    max-width: 100%;
+}
+
+/*					Links and buttons					*/
+
+.content a {
+    /*A general link in content.*/
+    text-decoration: underline;
+    padding: 0;
+    color: inherit;
+}
+
+p a,
+span a,
+li a {
+    /*A link inside text.*/
+    padding: 1px 2px 1px 2px;
+    border: none;
+    background: transparent;
+}
+
+a.button,
+button {
+    /*Links that look like buttons and buttons.*/
+    margin: 1em;
+    width: auto;
+    padding: 1em;
+    text-decoration: none;
+}
+
+p a.button,
+span a.button {
+    /*Make button-like links smaller when in text.*/
+    padding: 1px 3px 1px 3px;
+    margin: 0.1em;
+}
+
+button:hover {
+    /*Make buttons have the expected hover cursor.*/
+    cursor: pointer;
+}
+
+nav button.dropdown {
+    /*Button for nav dropdown.*/
+    margin: 0 0 0 0.5em !important;
+    width: 5.5em;
+}
+
+nav button.dropdown:active {
+    color: transparent;
+}
+
+#dropdown-main.show a {
+    /*Nav links.*/
+    display: inline-block !important;
+    width: 7em !important;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    margin: 0.5em;
+}
+
+/*Lists*/
+
+ol,
+ul {
+    width: calc(100% - 4em);
+    padding: 0 2em 0 2em;
+    position: relative;
+    left: 1em;
+}
+
+li {
+    margin: 0.5em;
+}
+
+/*Table*/
+
+table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    border-spacing: 0.5em;
+}
+
+caption {
+    width: 100%;
+    text-align: center;
+}
+
+tbody {
+    display: block;
+    width: 100%;
+}
+
+td,
+th {
+    min-width: 5em;
+    padding: 1em;
+    text-align: center;
+}
+
+/*Form*/
+
+form {
+    text-align: center;
+}
+
+input,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+label,
+label input {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: auto;
+}
+
+fieldset {
+    width: 100%;
+    margin: 1.5em 0 1.5em 0;
+    padding: 1em 2em 1em 2em;
+    position: relative;
+    right: 2em;
+}
+
+legend {
+    position: relative;
+    top: 1em;
+    left: calc(50% - 1.2em);
+}
+
+input,
+textarea {
+    display: block;
+    width: 75%;
+    margin: 0.5em auto;
+    padding: 0.5em 1em;
+    text-align: center;
+    height: 3em;
+    vertical-align: middle;
+}
+
+textarea {
+    min-height: 5em;
+    text-align: left;
+}
+
+/*Searchbox*/
+
+form.search {
+    margin: 0;
+    padding: 0;
+}
+
+form.search input {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    height: 3em;
+}
+
+form.search input[type=text] {
+    width: calc(100% - 3em);
+    float: left;
+    border-right: none;
+}
+
+form.search input[type=submit] {
+    width: 3em;
+    float: left;
+    border-left: none;
+}
+
+
+
+
+
+/*Incompatibility options*/
+
+#incompatibility {
+    /*incompatability message*/
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 101;
+    padding: 10px;
+    background: #8b0000;
+    color: #FFF;
+    text-align: center;
+}
+
+_:-ms-lang(x),
+#navbar {
+    /*Browser hack to properly support IE and earlier versions of Edge. If you have any issues, please let me know. Please note that W3C validator does not like this. Thanks to https://browserstrangeness.bitbucket.io */
+    position: relative;
+    top: -2em;
+}
+
+}
+
+@supports (-ms-ime-align:auto) and (-webkit-text-stroke:initial) {
+    /*Browser hack to properly support newer versions of Edge (15+). If you have any issues, please let me know. Please note that W3C validator does not like this. Thanks to https://browserstrangeness.bitbucket.io */
+    #navbar {
+        position: sticky;
+        top: -0.5px;
+    }
+}
+
+
+
+@media screen and (max-width: 60em) {
+    header {
+        padding-bottom: 3em;
+    }
+    #navbar {
+        height: auto;
+    }
+    #navbar h1 {
+        left: 1em;
+        top: -2em;
+        width: calc(100% - 2em);
+        text-align: center;
+        text-overflow: ellipsis;
+    }
+    nav {}
+    nav button.dropdown {}
+    .full,
+    .half,
+    .threequarters,
+    .quarter {
+        width: calc(100% - 1em);
+        margin: 0.5em;
+    }
+    .content {
+        width: calc(100% - 1.5em);
+        padding: 0.75em;
+    }
+    .content h1 {
+        width: calc(100% + 0.8em);
+        left: -0.4em;
+    }
+    .landing h1 {
+        width: 100%;
+        position: initial;
+        padding: 0.5em 0;
+    }
+    .content ol,
+    .content ul {
+        margin-left: -1.5em;
+    }
+    footer .half,
+    footer .threequarters,
+    footer .quarter {
+        width: 99%;
+    }
+}
